@@ -30,7 +30,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  transition: var(--transition-general);
+  // transition: var(--transition-general);
 }
 header {
   background-color: var(--color-black-transparent-4);
@@ -92,18 +92,15 @@ a {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
 }
 .header-items {
   display: flex;
-  align-content: center;
-  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 .header-list {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
 }
