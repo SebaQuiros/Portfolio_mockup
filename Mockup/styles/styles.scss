@@ -6,7 +6,7 @@
   --font-sans-size: 1.2rem;
   --font-sans-weight: 400;
   --font-mono: "Red Hat Mono", monospace;
-  --font-mono-size: 0.8rem;
+  --font-mono-size: 1rem;
   --font-mono-weight: 400;
   --color-primary: #ccd6f6;
   --color-secondary: #8892b0;
@@ -50,12 +50,12 @@ body {
 }
 h1 {
   font-family: var(--font-sans);
-  font-size: 4.2rem;
+  font-size: 5rem;
   font-weight: 600;
 }
 h2 {
   font-family: var(--font-sans);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 h3 {
@@ -75,7 +75,7 @@ h5 {
 }
 h6 {
   font-family: var(--font-sans);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 p {
@@ -83,7 +83,7 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2rem;
-  margin: 40px 0;
+  margin-top: 20px;
 }
 a {
   display: inline-block;
@@ -218,8 +218,9 @@ header {
 
 /* Main */
 section {
-  min-height: 100vh;
-  padding: 5% 20%;
+  margin: 0px auto;
+  padding: 100px 0px;
+  max-width: 1000px;
   h6 {
     font-family: var(--font-mono);
     font-weight: var(--font-mono-weight);
@@ -228,4 +229,16 @@ section {
   h3 {
     color: var(--color-secondary);
   }
+  p {
+    color: var(--color-secondary);
+    max-width: 540px;
+  }
+}
+.section-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
 }
