@@ -8,7 +8,9 @@
   --font-mono: "Red Hat Mono", monospace;
   --font-mono-size: 0.8rem;
   --font-mono-weight: 400;
-  --color-background: #191d2b;
+  --color-background: #0a192f;
+  --color-primary: #ccd6f6;
+  --color-secondary: #8892b0;
   --color-highlight: #6d9e6b;
   --color-highlight-transparent: #6d9e6b4d;
   --color-white: #ffffff;
@@ -40,7 +42,7 @@
   padding: 0;
 }
 body {
-  color: var(--color-white);
+  color: var(--color-primary);
   background-color: var(--color-background);
   font-family: var(--font-sans);
   font-size: var(--font-sans-size);
@@ -88,15 +90,13 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
-  font-family: var(--font-mono);
-  font-size: var(--font-mono-size);
-  font-weight: var(--font-mono-weight);
   transition: var(--transition-links);
 }
 a:hover {
   color: var(--color-highlight);
 }
 button {
+  cursor: pointer;
   text-decoration: none;
   background-color: transparent;
   font-family: var(--font-mono);
@@ -121,17 +121,6 @@ li {
   text-decoration: none;
 }
 
-/* General Classes */
-.text-color {
-  color: var(--color-secondary);
-}
-.text-primary {
-  color: var(--color-grey-1);
-}
-.text-secondary {
-  color: var(--color-grey-3);
-}
-
 /*--- Content Styles ---*/
 
 /* Header */
@@ -139,7 +128,8 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px 50px;
+  height: 90px;
+  padding: 0 50px;
   background-color: var(--color-black-transparent-4);
 }
 .logo {
@@ -153,7 +143,7 @@ header {
   font-family: var(--font-mono);
   font-size: var(--font-mono-size);
   font-weight: var(--font-mono-weight);
-  padding: 12px 20px;
+  padding: 8px 20px;
 }
 .header-btn {
   margin-left: 20px;
@@ -162,5 +152,65 @@ header {
 /* Main */
 section {
   min-height: 100vh;
-  padding: 10% 10%;
+  padding: 5% 20%;
+}
+
+/* Aside */
+.left-fixed {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+}
+.left-fixed ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-fixed a {
+  padding: 10px;
+}
+.left-fixed li:last-of-type {
+  margin-bottom: 20px;
+}
+.left-fixed::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--color-primary);
+}
+.right-fixed {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+  right: 40px;
+  z-index: 10;
+}
+.mail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.mail-container a {
+  font-family: var(--font-mono);
+  font-size: var(--font-mono-size);
+  font-weight: var(--font-mono-weight);
+  margin: 20px auto;
+  padding: 10px;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+}
+.right-fixed::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--color-primary);
 }
