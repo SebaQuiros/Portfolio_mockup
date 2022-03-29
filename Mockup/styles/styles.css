@@ -150,6 +150,9 @@ header {
 }
 .nav-links li {
   display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--font-mono-size);
+  font-weight: var(--font-mono-weight);
   padding: 0 20px;
 }
 .header-btn {
