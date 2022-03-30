@@ -104,6 +104,24 @@ p a {
   color: var(--color-highlight);
 }
 
+p a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: var(--color-highlight);
+  width: 0;
+  left: 50%;
+  bottom: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+p a:hover::after {
+  width: 100%;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
