@@ -94,6 +94,16 @@ p {
   margin-top: 20px;
 }
 
+p a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  -webkit-transition: var(--transition-links);
+  transition: var(--transition-links);
+  color: var(--color-highlight);
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -270,27 +280,13 @@ header .header-btn {
 
 /* Main */
 section {
-  margin: 0px auto;
-  padding: 100px 0px;
+  min-height: 100vh;
   max-width: 1000px;
+  margin: 0px auto;
+  padding: 0px;
 }
 
-section h6 {
-  font-family: var(--font-mono);
-  font-weight: var(--font-mono-weight);
-  color: var(--color-highlight);
-}
-
-section h3 {
-  color: var(--color-secondary);
-}
-
-section p {
-  color: var(--color-secondary);
-  max-width: 540px;
-}
-
-.section-content {
+.sec-00-home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +300,24 @@ section p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  min-height: 100vh;
-  padding: 0px;
+}
+
+.sec-00-home h6 {
+  font-family: var(--font-mono);
+  font-weight: var(--font-mono-weight);
+  color: var(--color-highlight);
+}
+
+.sec-00-home h3 {
+  color: var(--color-secondary);
+}
+
+.sec-00-home p {
+  color: var(--color-secondary);
+  max-width: 540px;
+}
+
+.sec-00-home > a {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=styles.css.map */
