@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --font-sans: "Inter", sans-serif;
   --font-sans-size: 1.2rem;
   --font-sans-weight: 400;
-  --font-mono: "Red Hat Mono", monospace;
+  --font-mono: "Inconsolata", monospace;
   --font-mono-size: 1rem;
   --font-mono-weight: 400;
   --color-primary: #ccd6f6;
@@ -60,22 +60,22 @@ h2 {
 }
 h3 {
   font-family: var(--font-sans);
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 h4 {
   font-family: var(--font-sans);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 h5 {
   font-family: var(--font-sans);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 h6 {
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 p {
@@ -125,7 +125,7 @@ button {
   font-size: var(--font-mono-size);
   font-weight: 600;
   color: var(--color-highlight);
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: 1px solid var(--color-highlight);
   border-radius: var(--border-radius-sm);
   transition: var(--transition-links);
@@ -164,10 +164,10 @@ header {
     font-family: var(--font-mono);
     font-size: var(--font-mono-size);
     font-weight: var(--font-mono-weight);
-    padding: 8px 20px;
+    padding: 8px 12px;
   }
   .header-btn {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 }
 
@@ -179,7 +179,7 @@ header {
   left: 40px;
   right: auto;
   z-index: 10;
-  ul {
+  .links-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,7 +214,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     a {
       font-family: var(--font-mono);
       font-size: var(--font-mono-size);
@@ -255,7 +254,7 @@ section {
     font-weight: var(--font-mono-weight);
     color: var(--color-highlight);
   }
-  h3 {
+  h2 {
     color: var(--color-secondary);
   }
   p {
