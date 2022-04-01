@@ -323,8 +323,9 @@ section .section-title {
   margin: 10px 0px 40px;
 }
 
-section .section-title h6 {
-  margin-right: 10px;
+section .section-title h5 {
+  margin-left: 10px;
+  margin-right: 25px;
 }
 
 section .section-title::after {
@@ -334,7 +335,6 @@ section .section-title::after {
   top: -10px;
   width: 300px;
   height: 1px;
-  margin-left: 10px;
 }
 
 .sec-00-home {
