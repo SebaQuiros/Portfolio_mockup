@@ -314,7 +314,7 @@ header .header-btn {
 /* Main */
 section {
   min-height: 100vh;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0px auto;
 }
 
@@ -355,10 +355,6 @@ section .section-title::after {
           flex-direction: column;
 }
 
-#sec-00-home h2 {
-  margin-bottom: 50px;
-}
-
 #sec-00-home p {
   max-width: 540px;
 }
@@ -367,12 +363,20 @@ section .section-title::after {
   margin-top: 50px;
 }
 
+#sec-01-about {
+  max-width: 900px;
+}
+
 #sec-01-about .inner {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
   gap: 50px;
+}
+
+#sec-02-experience {
+  max-width: 700px;
 }
 
 #sec-02-experience .inner {
@@ -412,9 +416,13 @@ section .section-title::after {
   border-left: 2px solid var(--color-highlight);
 }
 
-#sec-02-experience .inner .jobs-panel {
-  position: relative;
-  width: 100%;
+#sec-02-experience .inner .jobs-panels {
   margin-left: 20px;
+}
+
+#sec-02-experience .inner .jobs-panels .job-panel {
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
 }
 /*# sourceMappingURL=styles.css.map */
