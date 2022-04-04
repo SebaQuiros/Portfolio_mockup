@@ -40,7 +40,9 @@
           </li>
         </ol>
       </nav>
-      <a class="header-btn" href="#"><button>Descargar CV</button></a>
+      <a class="header-btn" href="#"
+        ><button class="btn-regular">Descargar CV</button></a
+      >
     </header>
     <aside>
       <div class="left-fixed">
@@ -148,7 +150,7 @@
       </div>
     </aside>
     <main>
-      <section class="sec-00-home">
+      <section id="sec-00-home">
         <h6 class="text-color-mono">Hola, mi nombre es</h6>
         <h1>Sebastián Quirós.</h1>
         <h2 class="text-secondary-sans">Soy diseñador y programador.</h2>
@@ -162,10 +164,10 @@
           profesionalizarme y continuar sumando conocimientos.
         </p>
         <a href="mailto:sebaquiros@gmail.com" target="_blank"
-          ><button>Hablemos</button></a
+          ><button class="btn-regular">Hablemos</button></a
         >
       </section>
-      <section class="sec-01-about">
+      <section id="sec-01-about">
         <div class="section-title">
           <h6 class="text-color-mono">01.</h6>
           <h5>Sobre mí</h5>
@@ -178,27 +180,34 @@
             <a href="#">Lorem ipsum.</a>
             Culpa officiis consequatur amet impedit obcaecati! Saber!
           </p>
-
           <!-- <div class="img-wrapper"> -->
           <img style="width: 300px" src="img/seba.png" alt="Sebastián Quirós" />
           <!-- </div> -->
         </div>
       </section>
-      <section class="sec-02-experience">
+      <section id="sec-02-experience">
         <div class="section-title">
           <h6 class="text-color-mono">02.</h6>
           <h5>Experiencia</h5>
         </div>
         <div class="inner">
-          <p class="text-secondary-sans">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-            minima, voluptates mollitia vero, officia dolore similique odio
-            deleniti quisquam illum veniam facilis excepturi ratione. Culpa
-            officiis consequatur amet impedit obcaecati!
-          </p>
+          <div class="tablist">
+            <button class="btn-tab"><span>IDA</span></button>
+            <button class="btn-tab"><span>Dimension</span></button>
+            <button class="btn-tab"><span>Bruto Estudio</span></button>
+            <button class="btn-tab"><span>All Access</span></button>
+          </div>
+          <div class="jobs-panel">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
+              eaque enim ut facere optio animi et asperiores explicabo soluta
+              impedit pariatur fugit, accusantium reiciendis doloremque odio rem
+              a minima placeat?
+            </p>
+          </div>
         </div>
       </section>
-      <section class="sec-03-education">
+      <section id="sec-03-education">
         <div class="section-title">
           <h6 class="text-color-mono">03.</h6>
           <h5>Educación</h5>
@@ -212,7 +221,7 @@
           </p>
         </div>
       </section>
-      <section class="sec-04-skills">
+      <section id="sec-04-skills">
         <div class="section-title">
           <h6 class="text-color-mono">04.</h6>
           <h5>Habilidades</h5>
@@ -226,7 +235,7 @@
           </p>
         </div>
       </section>
-      <section class="sec-05-proyects">
+      <section id="sec-05-proyects">
         <div class="section-title">
           <h6 class="text-color-mono">05.</h6>
           <h5>Proyectos</h5>
