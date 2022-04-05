@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 :root {
   --font-sans: "Inter", sans-serif;
-  --font-mono: "Inconsolata", monospace;
+  --font-mono: "Fira Code", monospace;
   --font-weight-headings: 600;
-  --font-weight-buttons: 600;
   --font-weight-content: 400;
 }
 :root {
@@ -125,38 +124,38 @@ button {
   text-decoration: none;
   background-color: transparent;
   font-family: var(--font-mono);
-  font-weight: var(--font-weight-buttons);
   font-size: inherit;
   transition: var(--transition-links);
   border: 0px;
-}
-.btn-regular {
-  color: var(--color-highlight);
-  padding: 8px 10px;
-  border: 1px solid var(--color-highlight);
-  border-radius: var(--border-radius-sm);
-
-  &:hover {
-    background-color: var(--color-highlight-transparent);
-  }
-}
-.btn-tab {
-  color: var(--color-secondary);
-  position: relative;
-  display: flex;
-  white-space: nowrap;
-  align-items: center;
-  text-align: left;
-  width: 100%;
-  height: 42px;
-  padding: 0px 20px 2px;
-  border-left: 2px solid var(--color-decorations);
-  font-weight: inherit;
-  &:hover {
-    font-weight: var(--font-weight-buttons);
+  &.btn-regular {
     color: var(--color-highlight);
-    background-color: var(--color-highlight-transparent);
-    border-left: 2px solid var(--color-highlight);
+    padding: 8px 10px;
+    border: 1px solid var(--color-highlight);
+    border-radius: var(--border-radius-sm);
+
+    &:hover {
+      background-color: var(--color-highlight-transparent);
+    }
+  }
+  &.btn-tab {
+    color: var(--color-secondary);
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 42px;
+    padding: 0px 20px 2px;
+    border-left: 2px solid var(--color-decorations);
+    font-weight: inherit;
+    &.active {
+      border-left: 2px solid var(--color-highlight);
+    }
+    &:hover {
+      color: var(--color-highlight);
+      background-color: var(--color-highlight-transparent);
+    }
   }
 }
 
