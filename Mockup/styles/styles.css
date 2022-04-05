@@ -3,6 +3,9 @@
 :root {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Inconsolata", monospace;
+  --font-weight-headings: 600;
+  --font-weight-buttons: 600;
+  --font-weight-content: 400;
 }
 
 :root {
@@ -45,9 +48,20 @@
 }
 
 body {
-  color: var(--color-primary);
   background-color: var(--color-background);
   font-family: var(--font-sans);
+  font-weight: var(--font-weight-content);
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0px 10px;
+  font-weight: var(--font-weight-headings);
 }
 
 a {
@@ -127,6 +141,8 @@ button {
   text-decoration: none;
   background-color: transparent;
   font-family: var(--font-mono);
+  font-weight: var(--font-weight-buttons);
+  font-size: inherit;
   -webkit-transition: var(--transition-links);
   transition: var(--transition-links);
   border: 0px;
@@ -158,9 +174,11 @@ button {
   height: 42px;
   padding: 0px 20px 2px;
   border-left: 2px solid var(--color-decorations);
+  font-weight: inherit;
 }
 
 .btn-tab:hover {
+  font-weight: var(--font-weight-buttons);
   color: var(--color-highlight);
   background-color: var(--color-highlight-transparent);
   border-left: 2px solid var(--color-highlight);
@@ -287,8 +305,8 @@ header .header-btn {
 
 main {
   display: block;
-  padding: 0px 150px;
   margin: 0px auto;
+  padding: 0px 150px;
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
@@ -310,7 +328,7 @@ section .section-title {
   margin: 10px 0px 40px;
 }
 
-section .section-title h5 {
+section .section-title h2 {
   margin-left: 10px;
   margin-right: 25px;
 }
