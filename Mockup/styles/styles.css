@@ -35,7 +35,6 @@
   --transition-links: all 0.3s ease 0s;
 }
 
-/* General Styles */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -207,7 +206,6 @@ li {
   background-color: var(--color-decorations);
 }
 
-/* Header */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,7 +241,6 @@ header .header-btn {
   margin-left: 15px;
 }
 
-/* Aside */
 .left-fixed {
   width: 40px;
   position: fixed;
@@ -334,11 +331,10 @@ header .header-btn {
   margin: 0px auto;
 }
 
-/* Main */
 section {
-  min-height: 100vh;
   max-width: 1000px;
   margin: 0px auto;
+  padding: 100px auto;
 }
 
 section .section-title {
@@ -366,6 +362,7 @@ section .section-title::after {
 }
 
 #sec-00-home {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -36,7 +36,7 @@
   --transition-links: all 0.3s ease 0s;
 }
 
-/* General Styles */
+// General Styles
 * {
   box-sizing: border-box;
   margin: 0;
@@ -177,7 +177,7 @@ li {
   background-color: var(--color-decorations);
 }
 
-/* Header */
+// Header
 header {
   display: flex;
   justify-content: flex-end;
@@ -203,7 +203,7 @@ header {
   }
 }
 
-/* Aside */
+// Aside
 .left-fixed {
   width: 40px;
   position: fixed;
@@ -266,11 +266,11 @@ header {
   }
 }
 
-/* Main */
+// Main
 section {
-  min-height: 100vh;
   max-width: 1000px;
   margin: 0px auto;
+  padding: 100px auto;
   .section-title{
     display: flex;
     align-items: baseline;
@@ -290,6 +290,7 @@ section {
   }
 }
 #sec-00-home {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
