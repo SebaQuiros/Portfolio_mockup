@@ -137,6 +137,23 @@ button {
     background-color: var(--color-highlight-transparent);
   }
 }
+.btn-tab{
+  color: var(--color-secondary);
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  height: 42px;
+  padding: 0px 20px 2px;
+  border-left: 2px solid var(--color-decorations);
+  &:hover{
+    color: var(--color-highlight);
+    background-color: var(--color-highlight-transparent);
+    border-left: 2px solid var(--color-highlight);
+  }
+}
 ol,
 ul {
   list-style: none;
@@ -299,23 +316,6 @@ section {
       position: relative;
       z-index: 3;
       width: max-content;
-      .btn-tab{
-        color: var(--color-secondary);
-        position: relative;
-        display: flex;
-        white-space: nowrap;
-        align-items: center;
-        text-align: left;
-        width: 100%;
-        height: 42px;
-        padding: 0px 20px 2px;
-        border-left: 2px solid var(--color-decorations);
-        &:hover{
-          color: var(--color-highlight);
-          background-color: var(--color-highlight-transparent);
-          border-left: 2px solid var(--color-highlight);
-        }
-      }
     }
     .jobs-panels{
       margin-left: 20px;

@@ -159,6 +159,29 @@ button {
   background-color: var(--color-highlight-transparent);
 }
 
+.btn-tab {
+  color: var(--color-secondary);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  width: 100%;
+  height: 42px;
+  padding: 0px 20px 2px;
+  border-left: 2px solid var(--color-decorations);
+}
+
+.btn-tab:hover {
+  color: var(--color-highlight);
+  background-color: var(--color-highlight-transparent);
+  border-left: 2px solid var(--color-highlight);
+}
+
 ol,
 ul {
   list-style: none;
@@ -391,29 +414,6 @@ section .section-title::after {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-
-#sec-02-experience .inner .tablist .btn-tab {
-  color: var(--color-secondary);
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: left;
-  width: 100%;
-  height: 42px;
-  padding: 0px 20px 2px;
-  border-left: 2px solid var(--color-decorations);
-}
-
-#sec-02-experience .inner .tablist .btn-tab:hover {
-  color: var(--color-highlight);
-  background-color: var(--color-highlight-transparent);
-  border-left: 2px solid var(--color-highlight);
 }
 
 #sec-02-experience .inner .jobs-panels {
