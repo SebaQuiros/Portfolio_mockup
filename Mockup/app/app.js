@@ -1,30 +1,31 @@
 "use strict";
-let message = "Hello World";
+let message = "Hola, soy Seba";
 console.log(message);
 
 window.onload = () => {
   const button_switchers = document.querySelectorAll("[data-switcher]");
+  console.log(button_switchers);
 
-  for (let i = 0; i < tab_switchers.length; i++) {
-    const tab_switcher = tab_switchers[i];
-    const page_id = tab_switcher.dataset.tab;
+  for (let i = 0; i < button_switchers.length; i++) {
+    const button_switcher = button_switchers[i];
+    const job_panel_id = button_switcher.dataset.tab;
 
-    tab_switcher.addEventListener("click", () => {
+    button_switcher.addEventListener("click", () => {
       document
-        .querySelector(".tabs .tab.is-active")
-        .classList.remove("is-active");
-      tab_switcher.parentNode.classList.add("is-active");
+        .querySelector(".tablist .btn-tab.active")
+        .classList.remove("active");
+      button_switcher.classList.add("active");
 
-      switchPage(page_id);
+      switchJobPanel(job_panel_id);
     });
   }
 };
-function switchPage(page_id) {
-  const current_page = document.querySelector(".pages .page.is-active");
-  current_page.classList.remove("is-active");
+function switchJobPanel(job_panel_id) {
+  const current_job = document.querySelector(".panel-experience .job.active");
+  current_job.classList.remove("active");
 
-  const next_page = document.querySelector(
-    `.pages .page[data-page="${page_id}"]`
+  const next_job = document.querySelector(
+    `.panel-experience .job[data-job="${job_panel_id}"]`
   );
-  next_page.classList.add("is-active");
+  next_job.classList.add("active");
 }

@@ -41,7 +41,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -98,7 +98,7 @@ p a::after {
   left: 50%;
   bottom: 5px;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
@@ -165,8 +165,8 @@ button.btn-tab {
   display: flex;
   white-space: nowrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: left;
   width: 100%;
   height: 42px;
@@ -189,11 +189,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 90px;
   padding: 0 50px;
   background-color: var(--color-black-transparent-4);
@@ -231,11 +231,11 @@ header .header-btn {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .left-fixed a {
@@ -244,7 +244,7 @@ header .header-btn {
 
 .left-fixed a:hover {
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .left-fixed li:last-of-type {
@@ -274,11 +274,11 @@ header .header-btn {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .right-fixed .mail-container a {
@@ -286,13 +286,13 @@ header .header-btn {
   padding: 10px;
   letter-spacing: 3px;
   -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
 }
 
 .right-fixed .mail-container a:hover {
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .right-fixed::after {
@@ -323,8 +323,8 @@ section .section-title {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   margin: 10px 0px 40px;
 }
 
@@ -349,12 +349,12 @@ section .section-title::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 #sec-00-home p {
@@ -373,7 +373,7 @@ section .section-title::after {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
-      grid-template-columns: 3fr 2fr;
+  grid-template-columns: 3fr 2fr;
   gap: 50px;
 }
 
@@ -395,13 +395,18 @@ section .section-title::after {
   width: max-content;
 }
 
-#sec-02-experience .inner .jobs-panels {
+#sec-02-experience .inner .panel-experience {
   margin-left: 20px;
 }
 
-#sec-02-experience .inner .jobs-panels .job-panel {
+#sec-02-experience .inner .panel-experience .job {
   width: 100%;
   height: auto;
   padding: 10px 5px;
+  display: none;
+}
+
+#sec-02-experience .inner .panel-experience .job.active {
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */

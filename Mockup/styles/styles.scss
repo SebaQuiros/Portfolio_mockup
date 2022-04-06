@@ -305,12 +305,16 @@ section {
       z-index: 3;
       width: max-content;
     }
-    .jobs-panels {
+    .panel-experience {
       margin-left: 20px;
-      .job-panel {
+      .job {
         width: 100%;
         height: auto;
         padding: 10px 5px;
+        display: none;
+        &.active {
+          display: block;
+        }
       }
     }
   }
