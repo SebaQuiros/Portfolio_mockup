@@ -3,8 +3,16 @@
 :root {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
-  --font-weight-headings: 600;
-  --font-weight-content: 400;
+  --font-weight-heavy: 600;
+  --font-weight-regular: 400;
+  --font-weight-light: 200;
+  --font-size-xxl: 80px;
+  --font-size-xl: 32px;
+  --font-size-lg: 20px;
+  --font-size-md: 18px;
+  --font-size-sm: 16px;
+  --font-size-xs: 13px;
+  --font-size-xxs: 12px;
 }
 
 :root {
@@ -49,7 +57,7 @@
 body {
   background-color: var(--color-background);
   font-family: var(--font-sans);
-  font-weight: var(--font-weight-content);
+  font-weight: var(--font-weight-regular);
   color: var(--color-primary);
 }
 
@@ -60,7 +68,7 @@ h4,
 h5,
 h6 {
   margin: 0px 0px 10px;
-  font-weight: var(--font-weight-headings);
+  font-weight: var(--font-weight-heavy);
 }
 
 a {
@@ -130,6 +138,38 @@ li {
   font-family: var(--font-mono);
 }
 
+.font-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.font-xl {
+  font-size: var(--font-size-xl);
+}
+
+.font-lg {
+  font-size: var(--font-size-lg);
+}
+
+.font-md {
+  font-size: var(--font-size-md);
+}
+
+.font-sm {
+  font-size: var(--font-size-sm);
+}
+
+.font-xs {
+  font-size: var(--font-size-xs);
+}
+
+.font-xxs {
+  font-size: var(--font-size-xxs);
+}
+
+.font-wg-heavy {
+  font-weight: var(--font-weight-heavy);
+}
+
 ::before,
 ::after {
   background-color: var(--color-decorations);
@@ -185,6 +225,8 @@ button.btn-tab:hover {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,6 +324,7 @@ header .header-btn {
 }
 
 .right-fixed .mail-container a {
+  font-weight: var(--font-weight-light);
   margin: 20px auto;
   padding: 10px;
   letter-spacing: 3px;
@@ -328,7 +371,12 @@ section .section-title {
   margin: 10px 0px 40px;
 }
 
+section .section-title span {
+  font-size: var(--font-size-lg);
+}
+
 section .section-title h2 {
+  font-size: var(--font-size-xl);
   margin-left: 10px;
   margin-right: 25px;
 }
