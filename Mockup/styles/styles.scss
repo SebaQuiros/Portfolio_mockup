@@ -76,11 +76,7 @@ a {
   &:hover {
     color: var(--color-highlight);
   }
-}
-p {
-  line-height: 2rem;
-  margin-top: 20px;
-  a {
+  &.in-text {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition-links);
@@ -92,7 +88,7 @@ p {
       background-color: var(--color-highlight);
       width: 0;
       left: 50%;
-      bottom: 5px;
+      bottom: 2px;
       transform: translateX(-50%);
       transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
     }
@@ -101,11 +97,26 @@ p {
     }
   }
 }
+p {
+  line-height: 2rem;
+  margin-top: 20px;
+}
 ol,
 ul {
   list-style: none;
   text-decoration: none;
   margin: 0;
+  &.bullet-list {
+    position: relative;
+    padding-left: 30px;
+    li::before {
+      content: "▹";
+      position: absolute;
+      left: 0px;
+      background-color: transparent;
+      color: var(--color-highlight);
+    }
+  }
 }
 li {
   text-decoration: none;
@@ -335,7 +346,8 @@ section {
     gap: 50px;
   }
 }
-#sec-02-experience {
+#sec-02-experience,
+#sec-03-education {
   max-width: 700px;
   .inner {
     display: flex;
@@ -344,15 +356,23 @@ section {
       z-index: 3;
       width: max-content;
     }
-    .panel-experience {
+    .panel {
       margin-left: 20px;
-      .job {
+      .panel-content {
         width: 100%;
         height: auto;
         padding: 10px 5px;
         display: none;
+        transition: var(--transition-general);
         &.active {
           display: block;
+        }
+        h3 {
+          font-size: 22px;
+        }
+        span {
+          display: block;
+          margin-bottom: 25px;
         }
       }
     }

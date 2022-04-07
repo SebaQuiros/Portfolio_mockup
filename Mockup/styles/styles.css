@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 :root {
@@ -84,12 +85,7 @@ a:hover {
   color: var(--color-highlight);
 }
 
-p {
-  line-height: 2rem;
-  margin-top: 20px;
-}
-
-p a {
+a.in-text {
   text-decoration-skip-ink: auto;
   position: relative;
   -webkit-transition: var(--transition-links);
@@ -97,22 +93,27 @@ p a {
   color: var(--color-highlight);
 }
 
-p a::after {
+a.in-text::after {
   content: "";
   position: absolute;
   height: 1px;
   background-color: var(--color-highlight);
   width: 0;
   left: 50%;
-  bottom: 5px;
+  bottom: 2px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-p a:hover::after {
+a.in-text:hover::after {
   width: 100%;
+}
+
+p {
+  line-height: 2rem;
+  margin-top: 20px;
 }
 
 ol,
@@ -120,6 +121,21 @@ ul {
   list-style: none;
   text-decoration: none;
   margin: 0;
+}
+
+ol.bullet-list,
+ul.bullet-list {
+  position: relative;
+  padding-left: 30px;
+}
+
+ol.bullet-list li::before,
+ul.bullet-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  background-color: transparent;
+  color: var(--color-highlight);
 }
 
 li {
@@ -425,17 +441,20 @@ section .section-title::after {
   gap: 50px;
 }
 
-#sec-02-experience {
+#sec-02-experience,
+#sec-03-education {
   max-width: 700px;
 }
 
-#sec-02-experience .inner {
+#sec-02-experience .inner,
+#sec-03-education .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#sec-02-experience .inner .tablist {
+#sec-02-experience .inner .tablist,
+#sec-03-education .inner .tablist {
   position: relative;
   z-index: 3;
   width: -webkit-max-content;
@@ -443,18 +462,34 @@ section .section-title::after {
   width: max-content;
 }
 
-#sec-02-experience .inner .panel-experience {
+#sec-02-experience .inner .panel,
+#sec-03-education .inner .panel {
   margin-left: 20px;
 }
 
-#sec-02-experience .inner .panel-experience .job {
+#sec-02-experience .inner .panel .panel-content,
+#sec-03-education .inner .panel .panel-content {
   width: 100%;
   height: auto;
   padding: 10px 5px;
   display: none;
+  -webkit-transition: var(--transition-general);
+  transition: var(--transition-general);
 }
 
-#sec-02-experience .inner .panel-experience .job.active {
+#sec-02-experience .inner .panel .panel-content.active,
+#sec-03-education .inner .panel .panel-content.active {
   display: block;
+}
+
+#sec-02-experience .inner .panel .panel-content h3,
+#sec-03-education .inner .panel .panel-content h3 {
+  font-size: 22px;
+}
+
+#sec-02-experience .inner .panel .panel-content span,
+#sec-03-education .inner .panel .panel-content span {
+  display: block;
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

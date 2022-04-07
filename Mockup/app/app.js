@@ -21,11 +21,11 @@ window.onload = () => {
   }
 };
 function switchJobPanel(job_panel_id) {
-  const current_job = document.querySelector(".panel-experience .job.active");
+  const current_job = document.querySelector(".panel .panel-content.active");
   current_job.classList.remove("active");
 
   const next_job = document.querySelector(
-    `.panel-experience .job[data-job="${job_panel_id}"]`
+    `.panel .panel-content[data-content="${job_panel_id}"]`
   );
   next_job.classList.add("active");
 }
