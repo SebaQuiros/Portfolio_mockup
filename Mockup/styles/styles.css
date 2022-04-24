@@ -123,17 +123,38 @@ ul {
   margin: 0;
 }
 
-ol.bullet-list,
-ul.bullet-list {
+ol.bullet-list.texts,
+ul.bullet-list.texts {
   position: relative;
   padding-left: 30px;
 }
 
-ol.bullet-list li::before,
-ul.bullet-list li::before {
+ol.bullet-list.texts li::before,
+ul.bullet-list.texts li::before {
   content: "▹";
   position: absolute;
   left: 0px;
+  background-color: transparent;
+  color: var(--color-highlight);
+}
+
+ol.bullet-list.grid,
+ul.bullet-list.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(140px, 200px))[2];
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+  padding-left: 18px;
+  gap: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+ol.bullet-list.grid li::before,
+ul.bullet-list.grid li::before {
+  content: "▹";
+  position: relative;
+  left: -18px;
   background-color: transparent;
   color: var(--color-highlight);
 }

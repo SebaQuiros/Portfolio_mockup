@@ -107,14 +107,31 @@ ul {
   text-decoration: none;
   margin: 0;
   &.bullet-list {
-    position: relative;
-    padding-left: 30px;
-    li::before {
-      content: "▹";
-      position: absolute;
-      left: 0px;
-      background-color: transparent;
-      color: var(--color-highlight);
+    &.texts {
+      position: relative;
+      padding-left: 30px;
+      li::before {
+        content: "▹";
+        position: absolute;
+        left: 0px;
+        background-color: transparent;
+        color: var(--color-highlight);
+      }
+    }
+    &.grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      padding-left: 18px;
+      gap: 10px;
+      margin-top: 20px;
+      overflow: hidden;
+      li::before {
+        content: "▹";
+        position: relative;
+        left: -18px;
+        background-color: transparent;
+        color: var(--color-highlight);
+      }
     }
   }
 }
