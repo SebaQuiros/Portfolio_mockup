@@ -519,6 +519,22 @@ section .section-title::after {
   margin-bottom: 25px;
 }
 
+#sec-05-proyects .inner .featured-proyects .project {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-title h3 {
+  font-size: 28px;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;

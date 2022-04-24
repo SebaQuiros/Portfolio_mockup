@@ -398,6 +398,34 @@ section {
     }
   }
 }
+#sec-05-proyects {
+  .inner {
+    .featured-proyects {
+      .project {
+        position: relative;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        .project-content {
+          .project-title {
+            h3 {
+              font-size: 28px;
+            }
+          }
+          .project-description {
+          }
+          .project-tech-list {
+          }
+          .project-links {
+          }
+        }
+        .project-image {
+        }
+      }
+    }
+  }
+}
 
 // Footer
 footer {
