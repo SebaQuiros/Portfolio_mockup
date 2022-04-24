@@ -110,6 +110,9 @@ ul {
     &.texts {
       position: relative;
       padding-left: 30px;
+      li {
+        margin-bottom: 10px;
+      }
       li::before {
         content: "▹";
         position: absolute;

@@ -129,6 +129,11 @@ ul.bullet-list.texts {
   padding-left: 30px;
 }
 
+ol.bullet-list.texts li,
+ul.bullet-list.texts li {
+  margin-bottom: 10px;
+}
+
 ol.bullet-list.texts li::before,
 ul.bullet-list.texts li::before {
   content: "▹";
