@@ -267,6 +267,7 @@ button.btn-tab:hover {
 }
 
 header {
+  font-size: var(--font-size-xs);
   position: fixed;
   width: 100%;
   display: -webkit-box;
@@ -292,6 +293,7 @@ header .logo .img-logo {
 }
 
 header .nav-links li {
+  font-family: var(--font-mono);
   display: inline-block;
   padding: 8px 12px;
 }
@@ -344,6 +346,8 @@ header .header-btn {
 }
 
 .right-fixed {
+  font-size: var(--font-size-xxs);
+  font-family: var(--font-mono);
   width: 40px;
   position: fixed;
   bottom: 0px;
