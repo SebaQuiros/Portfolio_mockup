@@ -401,13 +401,28 @@ section {
 #sec-05-proyects {
   .inner {
     .featured-proyects {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      .project:not(:last-of-type) {
+        margin-bottom: 100px;
+      }
+      .project:nth-of-type(2n + 1) .project-content {
+        grid-column: 7 / -1;
+        text-align: right;
+      }
+      .project:nth-of-type(2n + 1) .project-image {
+        grid-column: 1 / 8;
+      }
       .project {
         position: relative;
         display: grid;
         gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         align-items: center;
         .project-content {
+          position: relative;
+          grid-area: 1 / 1 / -1 / 7;
           .project-title {
             h3 {
               font-size: 28px;
@@ -421,6 +436,9 @@ section {
           }
         }
         .project-image {
+          position: relative;
+          grid-area: 1 / 6 / -1 / -1;
+          z-index: 1;
         }
       }
     }
