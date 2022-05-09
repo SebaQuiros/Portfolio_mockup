@@ -23,6 +23,7 @@
   --color-primary: #ccd6f6;
   --color-secondary: #8892b0;
   --color-decorations: #233554;
+  --color-elements: #112240;
   --color-white: #ffffff;
   --color-black: #000;
   --color-black-transparent-1: rgba(0, 0, 0, 0.8);
@@ -168,50 +169,6 @@ li {
   text-decoration: none;
 }
 
-.text-color-highlight {
-  color: var(--color-highlight);
-}
-
-.text-color-secondary {
-  color: var(--color-secondary);
-}
-
-.text-mono {
-  font-family: var(--font-mono);
-}
-
-.font-xxl {
-  font-size: var(--font-size-xxl);
-}
-
-.font-xl {
-  font-size: var(--font-size-xl);
-}
-
-.font-lg {
-  font-size: var(--font-size-lg);
-}
-
-.font-md {
-  font-size: var(--font-size-md);
-}
-
-.font-sm {
-  font-size: var(--font-size-sm);
-}
-
-.font-xs {
-  font-size: var(--font-size-xs);
-}
-
-.font-xxs {
-  font-size: var(--font-size-xxs);
-}
-
-.font-wg-heavy {
-  font-weight: var(--font-weight-heavy);
-}
-
 ::before,
 ::after {
   background-color: var(--color-decorations);
@@ -303,6 +260,7 @@ header .header-btn {
 }
 
 .left-fixed {
+  color: var(--color-secondary);
   width: 40px;
   position: fixed;
   bottom: 0px;
@@ -348,6 +306,7 @@ header .header-btn {
 .right-fixed {
   font-size: var(--font-size-xxs);
   font-family: var(--font-mono);
+  color: var(--color-secondary);
   width: 40px;
   position: fixed;
   bottom: 0px;
@@ -418,7 +377,9 @@ section .section-title {
 }
 
 section .section-title span {
+  font-family: var(--font-mono);
   font-size: var(--font-size-lg);
+  color: var(--color-highlight);
 }
 
 section .section-title h2 {
@@ -451,7 +412,25 @@ section .section-title::after {
           flex-direction: column;
 }
 
+#sec-00-home .home-intro {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-highlight);
+}
+
+#sec-00-home h1 {
+  font-size: var(--font-size-xxl);
+}
+
+#sec-00-home .home-subtitle {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-secondary);
+}
+
 #sec-00-home p {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
   max-width: 540px;
 }
 
@@ -471,6 +450,15 @@ section .section-title::after {
   gap: 50px;
 }
 
+#sec-01-about .inner .about-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
+}
+
+#sec-01-about .inner .about-text .about-techs {
+  font-size: var(--font-size-xs);
+}
+
 #sec-02-experience,
 #sec-03-education {
   max-width: 700px;
@@ -485,6 +473,7 @@ section .section-title::after {
 
 #sec-02-experience .inner .tablist,
 #sec-03-education .inner .tablist {
+  font-size: var(--font-size-xs);
   position: relative;
   z-index: 3;
   width: -webkit-max-content;
@@ -519,8 +508,17 @@ section .section-title::after {
 
 #sec-02-experience .inner .panel .panel-content span,
 #sec-03-education .inner .panel .panel-content span {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-secondary);
   display: block;
   margin-bottom: 25px;
+}
+
+#sec-02-experience .inner .panel .panel-content .panel-list,
+#sec-03-education .inner .panel .panel-content .panel-list {
+  font-size: var(--font-size-md);
+  color: var(--color-secondary);
 }
 
 #sec-05-proyects .inner .featured-proyects {
@@ -563,8 +561,34 @@ section .section-title::after {
   grid-area: 1 / 1 / -1 / 7;
 }
 
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-title {
+  margin-bottom: 20px;
+}
+
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-title .project-intro {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-highlight);
+}
+
 #sec-05-proyects .inner .featured-proyects .project .project-content .project-title h3 {
   font-size: 28px;
+}
+
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-description {
+  -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+          box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-elements);
+  color: var(--color-secondary);
+  font-size: var(--font-size-md);
+}
+
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-description p {
+  margin: 0px;
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-image {

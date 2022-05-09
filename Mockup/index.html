@@ -171,14 +171,10 @@
     </aside>
     <main>
       <section id="sec-00-home">
-        <span class="text-color-highlight text-mono font-sm"
-          >Hola, mi nombre es</span
-        >
-        <h1 class="font-xxl">Sebastián Quirós.</h1>
-        <span class="text-color-secondary font-xxl font-wg-heavy"
-          >Diseño y programo.</span
-        >
-        <p class="text-color-secondary font-lg">
+        <span class="home-intro">Hola, mi nombre es</span>
+        <h1>Sebastián Quirós.</h1>
+        <span class="home-subtitle">Diseño y programo.</span>
+        <p>
           Amo aprender y mi pasión es crear. Una de mis aficiones es la
           impresión 3D, tengo un emprendimiento llamado
           <a
@@ -195,11 +191,11 @@
       </section>
       <section id="sec-01-about">
         <div class="section-title">
-          <span class="text-color-highlight text-mono">01.</span>
+          <span>01.</span>
           <h2>Sobre mí</h2>
         </div>
         <div class="inner">
-          <div class="text-color-secondary font-lg">
+          <div class="about-text">
             <p>
               Hola! Me llamo Sebastián, tengo 25 años y soy nuevo en el mundo de
               la programación. Aprendí a partir de los cursos de
@@ -218,7 +214,7 @@
               diseñador de experiencias de usuario.
             </p>
             <p>Estas son las tecnologías con las que estuve trabajando:</p>
-            <ul class="bullet-list font-xs grid">
+            <ul class="about-techs bullet-list grid">
               <li>JavaScript (ES6+)</li>
               <li>TypeScript</li>
               <li>HTML 5</li>
@@ -235,7 +231,7 @@
       </section>
       <section id="sec-02-experience">
         <div class="section-title">
-          <span class="text-color-highlight text-mono">02.</span>
+          <span>02.</span>
           <h2>Experiencia</h2>
         </div>
         <div class="inner">
@@ -264,10 +260,8 @@
                   >Fundación IDA</a
                 >
               </h3>
-              <span class="text-mono text-color-secondary font-xs"
-                >Enero 2021 - Marzo 2022</span
-              >
-              <div class="text-color-secondary font-md">
+              <span>Enero 2021 - Marzo 2022</span>
+              <div class="panel-list">
                 <ul class="bullet-list texts">
                   <li>
                     Encargado del área de arquitectura para la obtención,
@@ -290,10 +284,8 @@
                   >Dimension</a
                 >
               </h3>
-              <span class="text-mono text-color-secondary font-xs"
-                >Enero - Mayo 2021</span
-              >
-              <div class="text-color-secondary font-md">
+              <span>Enero - Mayo 2021</span>
+              <div class="panel-list">
                 <ul class="bullet-list texts">
                   <li>Trabajo con tecnología de impresión 3D.</li>
                   <li>
@@ -314,10 +306,8 @@
                   >Bruto Estudio</a
                 >
               </h3>
-              <span class="text-mono text-color-secondary font-xs"
-                >Abril 2018 - Agosto 2019</span
-              >
-              <div class="text-color-secondary font-md">
+              <span>Abril 2018 - Agosto 2019</span>
+              <div class="panel-list">
                 <ul class="bullet-list texts">
                   <li>
                     Documentación de todas las etapas de proyecto: de
@@ -345,10 +335,8 @@
                   >All Access</a
                 >
               </h3>
-              <span class="text-mono text-color-secondary font-xs"
-                >Enero - Abril 2018</span
-              >
-              <div class="text-color-secondary font-md">
+              <span>Enero - Abril 2018</span>
+              <div class="panel-list">
                 <ul class="bullet-list texts">
                   <li>Venta de entradas para el Loollapalooza.</li>
                   <li>Atención al público en español e inglés.</li>
@@ -361,17 +349,17 @@
       </section>
       <section id="sec-03-education">
         <div class="section-title">
-          <span class="text-color-highlight text-mono">03.</span>
+          <span>03.</span>
           <h2>Educación</h2>
         </div>
       </section>
       <section id="sec-04-skills">
         <div class="section-title">
-          <span class="text-color-highlight text-mono">04.</span>
+          <span>04.</span>
           <h2>Habilidades</h2>
         </div>
         <div class="inner">
-          <p class="text-color-secondary">
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
             minima, voluptates mollitia vero, officia dolore similique odio
             deleniti quisquam illum veniam facilis excepturi ratione. Culpa
@@ -381,7 +369,7 @@
       </section>
       <section id="sec-05-proyects">
         <div class="section-title">
-          <span class="text-color-highlight text-mono">05.</span>
+          <span>05.</span>
           <h2>Proyectos</h2>
         </div>
         <div class="inner">
@@ -389,10 +377,27 @@
             <li class="project">
               <div class="project-content">
                 <div class="project-title">
-                  <span class="text-color-highlight text-mono font-xs"
-                    >Proyecto destacado</span
-                  >
+                  <span class="project-intro">Emprendimiento</span>
                   <h3>Plan 3D</h3>
+                </div>
+                <div class="project-description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur tempora aliquid.
+                  </p>
+                </div>
+                <ul class="project-tech-list"></ul>
+                <div class="project-links"></div>
+              </div>
+              <div class="project-image">
+                <img src="img/Logo.png" alt="Logo de Plan 3D" />
+              </div>
+            </li>
+            <li class="project">
+              <div class="project-content">
+                <div class="project-title">
+                  <span class="project-intro">Proyecto de Arquitectura</span>
+                  <h3>Escuela náutica en Puerto de Olivos</h3>
                 </div>
                 <div class="project-description">
                   <p>
@@ -411,32 +416,10 @@
             <li class="project">
               <div class="project-content">
                 <div class="project-title">
-                  <span class="text-color-highlight text-mono font-xs"
-                    >Proyecto destacado</span
+                  <span class="project-intro"
+                    >Proyecto de Diseño Industrial</span
                   >
-                  <h3>Plan 3D</h3>
-                </div>
-                <div class="project-description">
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur tempora aliquid maxime maiores magnam quos quis
-                    quaerat laboriosam repellat.
-                  </p>
-                </div>
-                <ul class="project-tech-list"></ul>
-                <div class="project-links"></div>
-              </div>
-              <div class="project-image">
-                <img src="img/Logo.png" alt="Logo de Plan 3D" />
-              </div>
-            </li>
-            <li class="project">
-              <div class="project-content">
-                <div class="project-title">
-                  <span class="text-color-highlight text-mono font-xs"
-                    >Proyecto destacado</span
-                  >
-                  <h3>Plan 3D</h3>
+                  <h3>Producto descartable biodegradable</h3>
                 </div>
                 <div class="project-description">
                   <p>
