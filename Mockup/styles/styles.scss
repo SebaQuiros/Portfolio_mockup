@@ -410,22 +410,15 @@ section {
       list-style: none;
       padding: 0px;
       margin: 0px;
-      .project:not(:last-of-type) {
-        margin-bottom: 100px;
-      }
-      .project:nth-of-type(2n + 1) .project-content {
-        grid-column: 7 / -1;
-        text-align: right;
-      }
-      .project:nth-of-type(2n + 1) .project-image {
-        grid-column: 1 / 8;
-      }
       .project {
         position: relative;
         display: grid;
         gap: 10px;
         grid-template-columns: repeat(12, 1fr);
         align-items: center;
+        &:not(:last-of-type) {
+          margin-bottom: 100px;
+        }
         .project-content {
           position: relative;
           grid-area: 1 / 1 / -1 / 7;
@@ -438,6 +431,8 @@ section {
             }
             h3 {
               font-size: 28px;
+              margin-top: 10px;
+              padding-right: 150px;
             }
           }
           .project-description {
@@ -454,14 +449,46 @@ section {
             }
           }
           .project-tech-list {
-          }
-          .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+            margin: 25px 0px 10px;
+            padding: 0px;
+            li {
+              margin: 0px 20px 5px 0px;
+              color: var(--color-secondary);
+              font-family: var(--font-mono);
+              font-size: var(--font-size-xs);
+              white-space: nowrap;
+            }
           }
         }
         .project-image {
           position: relative;
           grid-area: 1 / 6 / -1 / -1;
           z-index: 1;
+        }
+        &:nth-of-type(2n + 1) {
+          .project-content {
+            grid-column: 7 / -1;
+            text-align: right;
+            .project-title {
+              h3 {
+                padding-left: 150px;
+                padding-right: 0px;
+              }
+            }
+            .project-tech-list {
+              justify-content: flex-end;
+              li {
+                margin: 0px 0px 5px 20px;
+              }
+            }
+          }
+          .project-image {
+            grid-column: 1 / 8;
+          }
         }
       }
     }
