@@ -634,6 +634,7 @@ section .section-title::after {
   transition: var(--transition-general);
   background-color: var(--color-highlight-transparent);
   mix-blend-mode: screen;
+  border-radius: var(--border-radius-sm);
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-image .img-wrapper {
@@ -650,6 +651,7 @@ section .section-title::after {
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-image .img-wrapper img {
+  border-radius: var(--border-radius-sm);
   max-width: 100%;
   display: block;
   position: static;

@@ -488,6 +488,7 @@ section {
               transition: var(--transition-general);
               background-color: var(--color-highlight-transparent);
               mix-blend-mode: screen;
+              border-radius: var(--border-radius-sm);
             }
           }
           .img-wrapper {
@@ -501,6 +502,7 @@ section {
             position: relative;
             overflow: hidden;
             img {
+              border-radius: var(--border-radius-sm);
               max-width: 100%;
               display: block;
               position: static;
