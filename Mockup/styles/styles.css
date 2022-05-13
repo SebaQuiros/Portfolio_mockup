@@ -551,6 +551,7 @@ section .section-title::after {
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-area: 1 / 1 / -1 / 7;
+  z-index: 2;
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-content .project-title {
@@ -573,7 +574,6 @@ section .section-title::after {
   -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
           box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
   position: relative;
-  z-index: 2;
   padding: 25px;
   border-radius: var(--border-radius-sm);
   background-color: var(--color-elements);

@@ -424,6 +424,7 @@ section {
         .project-content {
           position: relative;
           grid-area: 1 / 1 / -1 / 7;
+          z-index: 2;
           .project-title {
             margin-bottom: 20px;
             .project-intro {
@@ -440,7 +441,6 @@ section {
           .project-description {
             box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
             position: relative;
-            z-index: 2;
             padding: 25px;
             border-radius: var(--border-radius-sm);
             background-color: var(--color-elements);
