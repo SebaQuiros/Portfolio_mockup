@@ -214,6 +214,9 @@ header {
     font-family: var(--font-mono);
     display: inline-block;
     padding: 8px 12px;
+    span {
+      color: var(--color-highlight);
+    }
   }
   .header-btn {
     margin-left: 15px;

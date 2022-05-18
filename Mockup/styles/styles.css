@@ -258,6 +258,10 @@ header .nav-links li {
   padding: 8px 12px;
 }
 
+header .nav-links li span {
+  color: var(--color-highlight);
+}
+
 header .header-btn {
   margin-left: 15px;
 }
