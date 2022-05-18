@@ -428,23 +428,6 @@ section .section-title::after {
   color: var(--color-secondary);
 }
 
-#sec-01-about .inner .about-text .about-techs {
-  font-size: var(--font-size-xs);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(140px, 200px))[2];
-      grid-template-columns: repeat(2, minmax(140px, 200px));
-  padding-left: 18px;
-  gap: 10px;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-#sec-01-about .inner .about-text .about-techs li::before {
-  position: relative;
-  left: -18px;
-}
-
 #sec-02-experience,
 #sec-03-education {
   max-width: 700px;
