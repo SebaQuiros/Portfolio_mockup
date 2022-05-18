@@ -133,17 +133,6 @@ ul.bullet-list li::before {
   color: var(--color-highlight);
 }
 
-ol.bullet-list.texts,
-ul.bullet-list.texts {
-  position: relative;
-  padding-left: 30px;
-}
-
-ol.bullet-list.texts li,
-ul.bullet-list.texts li {
-  margin-bottom: 10px;
-}
-
 li {
   text-decoration: none;
 }
@@ -517,6 +506,17 @@ section .section-title::after {
 #sec-03-education .inner .panel .panel-content .panel-list {
   font-size: var(--font-size-md);
   color: var(--color-secondary);
+}
+
+#sec-02-experience .inner .panel .panel-content .panel-list .texts,
+#sec-03-education .inner .panel .panel-content .panel-list .texts {
+  position: relative;
+  padding-left: 30px;
+}
+
+#sec-02-experience .inner .panel .panel-content .panel-list .texts li,
+#sec-03-education .inner .panel .panel-content .panel-list .texts li {
+  margin-bottom: 10px;
 }
 
 #sec-04-skills .inner {

@@ -116,13 +116,6 @@ ul {
       background-color: transparent;
       color: var(--color-highlight);
     }
-    &.texts {
-      position: relative;
-      padding-left: 30px;
-      li {
-        margin-bottom: 10px;
-      }
-    }
   }
 }
 li {
@@ -399,6 +392,13 @@ section {
         .panel-list {
           font-size: var(--font-size-md);
           color: var(--color-secondary);
+          .texts {
+            position: relative;
+            padding-left: 30px;
+            li {
+              margin-bottom: 10px;
+            }
+          }
         }
       }
     }
