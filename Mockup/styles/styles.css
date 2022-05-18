@@ -519,6 +519,11 @@ section .section-title::after {
   margin-bottom: 10px;
 }
 
+#sec-02-experience .inner .panel .panel-content .panel-list .texts li::before,
+#sec-03-education .inner .panel .panel-content .panel-list .texts li::before {
+  position: absolute;
+}
+
 #sec-04-skills .inner {
   display: -ms-grid;
   display: grid;

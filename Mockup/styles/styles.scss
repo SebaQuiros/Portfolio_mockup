@@ -398,6 +398,9 @@ section {
             li {
               margin-bottom: 10px;
             }
+            li::before {
+              position: absolute;
+            }
           }
         }
       }
