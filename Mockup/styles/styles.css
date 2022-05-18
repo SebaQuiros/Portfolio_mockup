@@ -557,7 +557,6 @@ section .section-title::after {
 #sec-04-skills .inner .skill-set .set-content .set-description {
   -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
           box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
-  position: relative;
   padding: 25px;
   border-radius: var(--border-radius-sm);
   background-color: var(--color-elements);
