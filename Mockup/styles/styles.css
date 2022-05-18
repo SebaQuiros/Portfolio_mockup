@@ -127,8 +127,6 @@ ul {
 ol.bullet-list li::before,
 ul.bullet-list li::before {
   content: "▹";
-  position: relative;
-  left: 0px;
   background-color: transparent;
   color: var(--color-highlight);
 }
@@ -443,6 +441,7 @@ section .section-title::after {
 }
 
 #sec-01-about .inner .about-text .about-techs li::before {
+  position: relative;
   left: -18px;
 }
 
@@ -506,64 +505,87 @@ section .section-title::after {
 #sec-03-education .inner .panel .panel-content .panel-list {
   font-size: var(--font-size-md);
   color: var(--color-secondary);
-}
-
-#sec-02-experience .inner .panel .panel-content .panel-list .texts,
-#sec-03-education .inner .panel .panel-content .panel-list .texts {
   position: relative;
   padding-left: 30px;
 }
 
-#sec-02-experience .inner .panel .panel-content .panel-list .texts li,
-#sec-03-education .inner .panel .panel-content .panel-list .texts li {
+#sec-02-experience .inner .panel .panel-content .panel-list li,
+#sec-03-education .inner .panel .panel-content .panel-list li {
   margin-bottom: 10px;
 }
 
-#sec-02-experience .inner .panel .panel-content .panel-list .texts li::before,
-#sec-03-education .inner .panel .panel-content .panel-list .texts li::before {
+#sec-02-experience .inner .panel .panel-content .panel-list li::before,
+#sec-03-education .inner .panel .panel-content .panel-list li::before {
   position: absolute;
+  left: 0px;
 }
 
-#sec-04-skills .inner {
+#sec-04-skills {
+  max-width: 900px;
+}
+
+#sec-04-skills .inner .skill-set:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+#sec-04-skills .inner .skill-set .set-title {
+  margin-bottom: 20px;
+}
+
+#sec-04-skills .inner .skill-set .set-title span {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-highlight);
+}
+
+#sec-04-skills .inner .skill-set .set-title h3 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+#sec-04-skills .inner .skill-set .set-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-}
-
-#sec-04-skills .inner .skill-set {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  gap: 20px;
 }
 
-#sec-04-skills .inner .skill-set h3 {
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: -webkit-min-content;
-  max-width: -moz-min-content;
-  max-width: min-content;
-  text-align: center;
-  font-size: 28px;
+#sec-04-skills .inner .skill-set .set-content .set-description {
+  -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+          box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+  position: relative;
+  padding: 25px;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-elements);
+  color: var(--color-secondary);
+  font-size: var(--font-size-md);
 }
 
-#sec-04-skills .inner .skill-set .skill-list {
+#sec-04-skills .inner .skill-set .set-content .set-description p {
+  margin: 0px;
+}
+
+#sec-04-skills .inner .skill-set .set-content .set-list {
   font-size: var(--font-size-xs);
+  color: var(--color-secondary);
+  position: relative;
+  padding-left: 30px;
+  padding-left: 18px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#sec-04-skills .inner .skill-set .set-content .set-list li {
+  margin-bottom: 10px;
+}
+
+#sec-04-skills .inner .skill-set .set-content .set-list li::before {
+  position: relative;
+  left: -18px;
 }
 
 #sec-05-proyects .inner .featured-proyects {
@@ -600,7 +622,7 @@ section .section-title::after {
   margin-bottom: 20px;
 }
 
-#sec-05-proyects .inner .featured-proyects .project .project-content .project-title .project-intro {
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-title span {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   color: var(--color-highlight);
@@ -645,6 +667,11 @@ section .section-title::after {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   white-space: nowrap;
+}
+
+#sec-05-proyects .inner .featured-proyects .project .project-content .project-tech-list li::before {
+  position: relative;
+  left: -5px;
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-image {

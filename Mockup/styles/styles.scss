@@ -111,8 +111,6 @@ ul {
   &.bullet-list {
     li::before {
       content: "▹";
-      position: relative;
-      left: 0px;
       background-color: transparent;
       color: var(--color-highlight);
     }
@@ -351,6 +349,7 @@ section {
         margin-top: 20px;
         overflow: hidden;
         li::before {
+          position: relative;
           left: -18px;
         }
       }
@@ -392,15 +391,14 @@ section {
         .panel-list {
           font-size: var(--font-size-md);
           color: var(--color-secondary);
-          .texts {
-            position: relative;
-            padding-left: 30px;
-            li {
-              margin-bottom: 10px;
-            }
-            li::before {
-              position: absolute;
-            }
+          position: relative;
+          padding-left: 30px;
+          li {
+            margin-bottom: 10px;
+          }
+          li::before {
+            position: absolute;
+            left: 0px;
           }
         }
       }
@@ -408,24 +406,57 @@ section {
   }
 }
 #sec-04-skills {
+  max-width: 900px;
   .inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     .skill-set {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      h3 {
-        height: 100px;
-        display: flex;
-        align-items: center;
-        max-width: min-content;
-        text-align: center;
-        font-size: 28px;
+      &:not(:last-of-type) {
+        margin-bottom: 50px;
       }
-      .skill-list {
-        font-size: var(--font-size-xs);
+      .set-title {
+        margin-bottom: 20px;
+        span {
+          font-family: var(--font-mono);
+          font-size: var(--font-size-xs);
+          color: var(--color-highlight);
+        }
+        h3 {
+          font-size: 28px;
+          margin-top: 10px;
+        }
+      }
+      .set-content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        .set-description {
+          box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+          position: relative;
+          padding: 25px;
+          border-radius: var(--border-radius-sm);
+          background-color: var(--color-elements);
+          color: var(--color-secondary);
+          font-size: var(--font-size-md);
+          p {
+            margin: 0px;
+          }
+        }
+        .set-list {
+          font-size: var(--font-size-xs);
+          color: var(--color-secondary);
+          position: relative;
+          padding-left: 30px;
+          padding-left: 18px;
+          margin-top: 20px;
+          overflow: hidden;
+          li {
+            margin-bottom: 10px;
+          }
+          li::before {
+            position: relative;
+            left: -18px;
+          }
+        }
       }
     }
   }
@@ -451,7 +482,7 @@ section {
           z-index: 2;
           .project-title {
             margin-bottom: 20px;
-            .project-intro {
+            span {
               font-family: var(--font-mono);
               font-size: var(--font-size-xs);
               color: var(--color-highlight);
@@ -487,6 +518,10 @@ section {
               font-family: var(--font-mono);
               font-size: var(--font-size-xs);
               white-space: nowrap;
+            }
+            li::before {
+              position: relative;
+              left: -5px;
             }
           }
         }
