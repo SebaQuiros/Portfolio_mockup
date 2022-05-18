@@ -124,6 +124,15 @@ ul {
   margin: 0;
 }
 
+ol.bullet-list li::before,
+ul.bullet-list li::before {
+  content: "▹";
+  position: relative;
+  left: 0px;
+  background-color: transparent;
+  color: var(--color-highlight);
+}
+
 ol.bullet-list.texts,
 ul.bullet-list.texts {
   position: relative;
@@ -133,36 +142,6 @@ ul.bullet-list.texts {
 ol.bullet-list.texts li,
 ul.bullet-list.texts li {
   margin-bottom: 10px;
-}
-
-ol.bullet-list.texts li::before,
-ul.bullet-list.texts li::before {
-  content: "▹";
-  position: absolute;
-  left: 0px;
-  background-color: transparent;
-  color: var(--color-highlight);
-}
-
-ol.bullet-list.grid,
-ul.bullet-list.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(140px, 200px))[2];
-      grid-template-columns: repeat(2, minmax(140px, 200px));
-  padding-left: 18px;
-  gap: 10px;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-ol.bullet-list.grid li::before,
-ul.bullet-list.grid li::before {
-  content: "▹";
-  position: relative;
-  left: -18px;
-  background-color: transparent;
-  color: var(--color-highlight);
 }
 
 li {
@@ -464,6 +443,18 @@ section .section-title::after {
 
 #sec-01-about .inner .about-text .about-techs {
   font-size: var(--font-size-xs);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(140px, 200px))[2];
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+  padding-left: 18px;
+  gap: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#sec-01-about .inner .about-text .about-techs li::before {
+  left: -18px;
 }
 
 #sec-02-experience,
@@ -526,6 +517,48 @@ section .section-title::after {
 #sec-03-education .inner .panel .panel-content .panel-list {
   font-size: var(--font-size-md);
   color: var(--color-secondary);
+}
+
+#sec-04-skills .inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+#sec-04-skills .inner .skill-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#sec-04-skills .inner .skill-set h3 {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  text-align: center;
+  font-size: 28px;
+}
+
+#sec-04-skills .inner .skill-set .skill-list {
+  font-size: var(--font-size-xs);
 }
 
 #sec-05-proyects .inner .featured-proyects {
