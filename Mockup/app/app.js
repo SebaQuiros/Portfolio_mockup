@@ -29,3 +29,4 @@ function switchJobPanel(job_panel_id) {
   );
   next_job.classList.add("active");
 }
+// Para angular dejarlo en el HTML
