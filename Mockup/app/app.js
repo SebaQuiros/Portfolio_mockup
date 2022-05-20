@@ -12,7 +12,7 @@ window.onload = () => {
   //  Experiencia (xp)
   for (let i = 0; i < button_switchers_xp.length; i++) {
     const button_switcher_xp = button_switchers_xp[i];
-    const xp_panel_id = button_switcher_xp.dataset.xptab;
+    const xp_panel_id = button_switcher_xp.dataset.tab;
 
     button_switcher_xp.addEventListener("click", () => {
       document
