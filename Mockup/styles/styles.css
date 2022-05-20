@@ -206,8 +206,8 @@ header {
   padding: 0 50px;
   background-color: rgba(10, 25, 47, 0.85);
   z-index: 11;
-  -webkit-box-shadow: 0 10px 30px -10px var(--color-black-transparent-4);
-          box-shadow: 0 10px 30px -10px var(--color-black-transparent-4);
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
 }
 
 header .logo {
@@ -428,6 +428,74 @@ section .section-title::after {
   color: var(--color-secondary);
 }
 
+#sec-01-about .inner .about-img {
+  position: relative;
+  max-width: 300px;
+}
+
+#sec-01-about .inner .about-img .img-wrapper {
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
+  -webkit-transition: var(--transition-general);
+  transition: var(--transition-general);
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-highlight);
+}
+
+#sec-01-about .inner .about-img .img-wrapper:hover {
+  background-color: var(--color-grey-2);
+}
+
+#sec-01-about .inner .about-img .img-wrapper::before, #sec-01-about .inner .about-img .img-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-sm);
+  -webkit-transition: var(--transition-general);
+  transition: var(--transition-general);
+}
+
+#sec-01-about .inner .about-img .img-wrapper::before {
+  top: 0px;
+  left: 0px;
+  background-color: var(--color-highlight);
+  mix-blend-mode: screen;
+}
+
+#sec-01-about .inner .about-img .img-wrapper::after {
+  border: 2px solid var(--color-highlight);
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+  background-color: transparent;
+}
+
+#sec-01-about .inner .about-img .img-wrapper .my-image {
+  position: relative;
+  border-radius: var(--border-radius-sm);
+  mix-blend-mode: multiply;
+  -webkit-filter: grayscale(50%) contrast(1);
+          filter: grayscale(50%) contrast(1);
+  -webkit-transition: var(--transition-general);
+  transition: var(--transition-general);
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#sec-01-about .inner .about-img .img-wrapper .my-image img {
+  max-width: 100%;
+  display: block;
+  position: static;
+}
+
 #sec-02-experience,
 #sec-03-education {
   max-width: 700px;
@@ -566,8 +634,8 @@ section .section-title::after {
 }
 
 #sec-04-skills .inner .skill-set .set-content .set-description {
-  -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
-          box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
   padding: 25px;
   border-radius: var(--border-radius-sm);
   background-color: var(--color-elements);
@@ -645,8 +713,8 @@ section .section-title::after {
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-content .project-description {
-  -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
-          box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
   position: relative;
   padding: 25px;
   border-radius: var(--border-radius-sm);
@@ -685,8 +753,8 @@ section .section-title::after {
 }
 
 #sec-05-proyects .inner .featured-proyects .project .project-image {
-  -webkit-box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
-          box-shadow: 0 10px 30px -15px var(--color-black-transparent-4);
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
   -webkit-transition: var(--transition-general);
   transition: var(--transition-general);
   grid-area: 1 / 6 / -1 / -1;
@@ -716,7 +784,7 @@ section .section-title::after {
   border-radius: var(--border-radius-sm);
 }
 
-#sec-05-proyects .inner .featured-proyects .project .project-image .img-wrapper {
+#sec-05-proyects .inner .featured-proyects .project .project-image a .img-wrapper {
   border-radius: var(--border-radius-sm);
   mix-blend-mode: multiply;
   -webkit-filter: grayscale(100%) contrast(1) brightness(90%);
@@ -729,7 +797,7 @@ section .section-title::after {
   overflow: hidden;
 }
 
-#sec-05-proyects .inner .featured-proyects .project .project-image .img-wrapper img {
+#sec-05-proyects .inner .featured-proyects .project .project-image a .img-wrapper img {
   border-radius: var(--border-radius-sm);
   max-width: 100%;
   display: block;
