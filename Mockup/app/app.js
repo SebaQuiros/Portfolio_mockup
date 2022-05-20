@@ -41,10 +41,10 @@ window.onload = () => {
 };
 
 function switchXpPanel(panel_id) {
-  const current_panel = document.querySelector(
+  const current_xp_panel = document.querySelector(
     `.xp-panel .panel-content.active`
   );
-  current_panel.classList.remove("active");
+  current_xp_panel.classList.remove("active");
 
   const next_xp = document.querySelector(
     `.xp-panel .panel-content[data-xp="${panel_id}"]`
@@ -53,10 +53,10 @@ function switchXpPanel(panel_id) {
 }
 
 function switchEduPanel(panel_id) {
-  const current_panel = document.querySelector(
+  const current_edu_panel = document.querySelector(
     `.edu-panel .panel-content.active`
   );
-  current_panel.classList.remove("active");
+  current_edu_panel.classList.remove("active");
 
   const next_edu = document.querySelector(
     `.edu-panel .panel-content[data-edu="${panel_id}"]`
