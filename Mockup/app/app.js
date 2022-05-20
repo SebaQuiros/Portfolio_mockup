@@ -47,7 +47,7 @@ function switchXpPanel(panel_id) {
   current_xp_panel.classList.remove("active");
 
   const next_xp = document.querySelector(
-    `.xp-panel .panel-content[data-xp="${panel_id}"]`
+    `.xp-panel .panel-content[data-panel="${panel_id}"]`
   );
   next_xp.classList.add("active");
 }
@@ -59,7 +59,7 @@ function switchEduPanel(panel_id) {
   current_edu_panel.classList.remove("active");
 
   const next_edu = document.querySelector(
-    `.edu-panel .panel-content[data-edu="${panel_id}"]`
+    `.edu-panel .panel-content[data-panel="${panel_id}"]`
   );
   next_edu.classList.add("active");
 }
