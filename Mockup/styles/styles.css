@@ -440,8 +440,10 @@ section .section-title::after {
   display: flex;
 }
 
-#sec-02-experience .inner .tablist,
-#sec-03-education .inner .tablist {
+#sec-02-experience .inner .xp-tablist,
+#sec-02-experience .inner .edu-tablist,
+#sec-03-education .inner .xp-tablist,
+#sec-03-education .inner .edu-tablist {
   font-size: var(--font-size-xs);
   position: relative;
   z-index: 3;
@@ -450,13 +452,17 @@ section .section-title::after {
   width: max-content;
 }
 
-#sec-02-experience .inner .panel,
-#sec-03-education .inner .panel {
+#sec-02-experience .inner .xp-panel,
+#sec-02-experience .inner .edu-panel,
+#sec-03-education .inner .xp-panel,
+#sec-03-education .inner .edu-panel {
   margin-left: 20px;
 }
 
-#sec-02-experience .inner .panel .panel-content,
-#sec-03-education .inner .panel .panel-content {
+#sec-02-experience .inner .xp-panel .panel-content,
+#sec-02-experience .inner .edu-panel .panel-content,
+#sec-03-education .inner .xp-panel .panel-content,
+#sec-03-education .inner .edu-panel .panel-content {
   width: 100%;
   height: auto;
   padding: 10px 5px;
@@ -465,26 +471,34 @@ section .section-title::after {
   transition: var(--transition-general);
 }
 
-#sec-02-experience .inner .panel .panel-content.active,
-#sec-03-education .inner .panel .panel-content.active {
+#sec-02-experience .inner .xp-panel .panel-content.active,
+#sec-02-experience .inner .edu-panel .panel-content.active,
+#sec-03-education .inner .xp-panel .panel-content.active,
+#sec-03-education .inner .edu-panel .panel-content.active {
   display: block;
 }
 
-#sec-02-experience .inner .panel .panel-content h3,
-#sec-03-education .inner .panel .panel-content h3 {
+#sec-02-experience .inner .xp-panel .panel-content h3,
+#sec-02-experience .inner .edu-panel .panel-content h3,
+#sec-03-education .inner .xp-panel .panel-content h3,
+#sec-03-education .inner .edu-panel .panel-content h3 {
   font-size: 22px;
   margin: 0px;
 }
 
-#sec-02-experience .inner .panel .panel-content .panel-subtitle,
-#sec-03-education .inner .panel .panel-content .panel-subtitle {
+#sec-02-experience .inner .xp-panel .panel-content .panel-subtitle,
+#sec-02-experience .inner .edu-panel .panel-content .panel-subtitle,
+#sec-03-education .inner .xp-panel .panel-content .panel-subtitle,
+#sec-03-education .inner .edu-panel .panel-content .panel-subtitle {
   font-size: 22px;
   color: var(--color-secondary);
   margin-bottom: 10px;
 }
 
-#sec-02-experience .inner .panel .panel-content span,
-#sec-03-education .inner .panel .panel-content span {
+#sec-02-experience .inner .xp-panel .panel-content span,
+#sec-02-experience .inner .edu-panel .panel-content span,
+#sec-03-education .inner .xp-panel .panel-content span,
+#sec-03-education .inner .edu-panel .panel-content span {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   color: var(--color-secondary);
@@ -492,21 +506,27 @@ section .section-title::after {
   margin-bottom: 25px;
 }
 
-#sec-02-experience .inner .panel .panel-content .panel-list,
-#sec-03-education .inner .panel .panel-content .panel-list {
+#sec-02-experience .inner .xp-panel .panel-content .panel-list,
+#sec-02-experience .inner .edu-panel .panel-content .panel-list,
+#sec-03-education .inner .xp-panel .panel-content .panel-list,
+#sec-03-education .inner .edu-panel .panel-content .panel-list {
   font-size: var(--font-size-md);
   color: var(--color-secondary);
   position: relative;
   padding-left: 30px;
 }
 
-#sec-02-experience .inner .panel .panel-content .panel-list li,
-#sec-03-education .inner .panel .panel-content .panel-list li {
+#sec-02-experience .inner .xp-panel .panel-content .panel-list li,
+#sec-02-experience .inner .edu-panel .panel-content .panel-list li,
+#sec-03-education .inner .xp-panel .panel-content .panel-list li,
+#sec-03-education .inner .edu-panel .panel-content .panel-list li {
   margin-bottom: 10px;
 }
 
-#sec-02-experience .inner .panel .panel-content .panel-list li::before,
-#sec-03-education .inner .panel .panel-content .panel-list li::before {
+#sec-02-experience .inner .xp-panel .panel-content .panel-list li::before,
+#sec-02-experience .inner .edu-panel .panel-content .panel-list li::before,
+#sec-03-education .inner .xp-panel .panel-content .panel-list li::before,
+#sec-03-education .inner .edu-panel .panel-content .panel-list li::before {
   position: absolute;
   left: 0px;
 }
