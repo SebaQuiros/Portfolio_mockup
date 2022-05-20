@@ -12,8 +12,7 @@ window.onload = () => {
   //  Experiencia (xp)
   for (let i = 0; i < button_switchers_xp.length; i++) {
     const button_switcher_xp = button_switchers_xp[i];
-    const xp_panel_id = button_switcher_xp.dataset.tab;
-    const xp_panel = `xp-panel`;
+    const xp_panel_id = button_switcher_xp.dataset.xptab;
 
     button_switcher_xp.addEventListener("click", () => {
       document
@@ -21,7 +20,7 @@ window.onload = () => {
         .classList.remove("active");
       button_switcher_xp.classList.add("active");
 
-      switchPanel(xp_panel_id, xp_panel);
+      switchXpPanel(xp_panel_id);
     });
   }
 
@@ -29,7 +28,6 @@ window.onload = () => {
   for (let i = 0; i < button_switchers_edu.length; i++) {
     const button_switcher_edu = button_switchers_edu[i];
     const edu_panel_id = button_switcher_edu.dataset.tab;
-    const edu_panel = `edu-panel`;
 
     button_switcher_edu.addEventListener("click", () => {
       document
@@ -37,19 +35,31 @@ window.onload = () => {
         .classList.remove("active");
       button_switcher_edu.classList.add("active");
 
-      switchPanel(edu_panel_id, edu_panel);
+      switchEduPanel(edu_panel_id);
     });
   }
 };
 
-function switchPanel(panel_id, panel_type) {
+function switchXpPanel(panel_id) {
   const current_panel = document.querySelector(
-    `${panel_type} .panel-content.active`
+    `.xp-panel .panel-content.active`
   );
   current_panel.classList.remove("active");
 
-  const next_job = document.querySelector(
-    `${panel_type} .panel-content[data-content="${panel_id}"]`
+  const next_xp = document.querySelector(
+    `.xp-panel .panel-content[data-xp="${panel_id}"]`
   );
-  next_job.classList.add("active");
+  next_xp.classList.add("active");
+}
+
+function switchEduPanel(panel_id) {
+  const current_panel = document.querySelector(
+    `.edu-panel .panel-content.active`
+  );
+  current_panel.classList.remove("active");
+
+  const next_edu = document.querySelector(
+    `.edu-panel .panel-content[data-edu="${panel_id}"]`
+  );
+  next_edu.classList.add("active");
 }
